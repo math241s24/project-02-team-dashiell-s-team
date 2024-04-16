@@ -1,0 +1,48 @@
+---
+title: "UK Polling Trends"
+subtitle: "Proposal for Project 2"
+authors: "Dashiell Ward"
+format: html
+editor: visual
+---
+
+```{r load-packages}
+#| label: load-pkgs
+#| message: false
+#| warning: false
+
+library(tidyverse)
+```
+
+## Dataset
+
+```{r load-data, eval=FALSE}
+#| label: load-data
+#| message: false
+
+file_path <- "/Users/dashiellward/Downloads/GB-Voting-Intention-31.03.2024.csv"
+
+setwd("/Users/dashiellward/Downloads")
+
+data <- read.csv("GB-Voting-Intention-31.03.2024.csv")
+
+GB_Voting_Intention_31_03_2024 <- read_csv("Downloads/GB-Voting-Intention-31.03.2024.csv")
+
+View(GB_Voting_Intention_31_03_2024)
+
+## read data 
+```
+
+Disclaimer: I could not get R to recognize that the dataset is in my working directory, although it is. I have attached a link to an article which contains the dataset, however, so that you can see it. Profuse apologies!
+
+Link: https://redfieldandwiltonstrategies.com/latest-gb-voting-intention-31-march-2024/
+
+## Reason for Choosing this Dataset
+
+The United Kingdom has been under the rule of the Conservative Party since 2010, but polling over the past two years in particular has indicated that that may be coming to an end. The current Prime Minister, Rishi Sunak, is the 5th Tory PM since the Party came to power, and is facing the dire prospect of leading the Conservatives into a General Election (one must be called no later than 2025) while support is at a low. I follow UK politics somewhat closely, and would love to toy with the considerable data Redfield & Wilton provide.
+
+## Questions and Analysis Plan
+
+The question is this: What margins are the major parties in the United Kingdom likely to hold in Parliament following the next General Election, based on current poll trends?
+
+The particular analysis I would like to perform is, I must admit, cribbed from an X (formerly Twitter) user who came up with the idea first. I don't share their technological skill, however, and they did not provide instructions for emulation, so I like to believe that this will prove to be a sufficiently novel exercise: Using the data supplied by Redfield & Wilton, I would like to simulate a series of possible outcomes, and produce some data visualizations therefrom. In an ideal world, this would mean simulating many, many outcomes, and collating from there.
